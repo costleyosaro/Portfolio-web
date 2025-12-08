@@ -1,0 +1,91 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    color: #fff;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   NAVBAR - SIMPLE
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-section {
+    padding: 120px 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+.contact-details {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: #ff9800;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 490px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .navbar .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .contact-section {
+        padding: 60px 10px;
+    }
+}

@@ -1,0 +1,16 @@
+<!-- templates/add_project.html -->
+{% load static %}
+<html>
+<head>
+    <title>Add Project</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <h1>Add a New Project</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Project</button>
+    </form>
+</body>
+</html>

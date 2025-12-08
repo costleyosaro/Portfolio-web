@@ -1,0 +1,230 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Ebuka Portfolio</title>
+
+  <!-- FontAwesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* =========================
+       GLOBAL STYLES
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #222;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: #FFA500;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffcc66;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .navbar .logo {
+      color: #FFA500;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .nav-links li {
+      margin-left: 30px;
+    }
+
+    .navbar .nav-links a {
+      color: #FFA500;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    /* =========================
+       CONTACT SECTION
+    ========================= */
+    .contact-section {
+      max-width: 900px;
+      margin: 140px auto 80px auto;
+      padding: 0 20px;
+    }
+
+    .contact-section h2 {
+      font-size: 2.8rem;
+      color: #FFA500;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 1.2rem;
+    }
+
+    .contact-details p {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .contact-details p strong {
+      min-width: 90px;
+      color: #FFA500;
+    }
+
+    /* =========================
+       SOCIAL LINKS
+    ========================= */
+    .social-section {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-top: 1px dotted #FFA500;
+      border-bottom: 1px dotted #FFA500;
+      padding: 30px 10px;
+    }
+
+    .social-card {
+      flex: 1 1 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 1.3rem;
+      padding: 15px 20px;
+      border-right: 1px dotted #FFA500;
+      transition: transform 0.2s ease;
+      min-width: 200px;
+    }
+
+    .social-card:last-child {
+      border-right: none;
+    }
+
+    .social-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .social-card i {
+      font-size: 1.6rem;
+      color: #FFA500;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width: 1024px) {
+      .navbar {
+        padding: 15px 40px;
+      }
+      .contact-section h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 12px 30px;
+      }
+      .contact-section {
+        margin-top: 120px;
+      }
+      .social-section {
+        flex-direction: column;
+        border-top: 1px dotted #FFA500;
+        border-bottom: none;
+      }
+      .social-card {
+        border-right: none;
+        border-bottom: 1px dotted #FFA500;
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .social-card:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media (max-width: 490px) {
+      .contact-section h2 {
+        font-size: 2rem;
+      }
+      .contact-details p {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .contact-details p strong {
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <ul class="nav-links">
+      <li><a href="{% url 'home' %}">Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+
+    <div class="contact-details">
+      <p><strong>Name:</strong> Ebuka Anthony Akunedoziobi</p>
+      <p><strong>Email:</strong> <a href="mailto:eakunedoziobi@gmail.com">eakunedoziobi@gmail.com</a></p>
+      <p><strong>Phone:</strong> +44 712 345 6789</p>
+      <p><strong>Location:</strong> United Kingdom</p>
+    </div>
+
+    <div class="social-section">
+      <a href="https://linkedin.com" target="_blank" class="social-card"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com" target="_blank" class="social-card"><i class="fab fa-github"></i> GitHub</a>
+      <a href="#" target="_blank" class="social-card"><i class="fab fa-twitter"></i> Twitter</a>
+    </div>
+  </section>
+
+</body>
+</html>
