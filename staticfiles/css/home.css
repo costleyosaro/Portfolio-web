@@ -27,7 +27,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: #FFA500;
+    background: #ff8f00;
     padding: 16px 35px;
     display: flex;
     justify-content: space-between;
@@ -337,16 +337,7 @@ body {
     background: #ffba38;
 }
 
-.latest-badge {
-  display: inline-block;
-  background: #FFA500;
-  color: white;
-  padding: 3px 10px;
-  font-size: 12px;
-  border-radius: 5px;
-  margin-left: 10px;
-  font-weight: bold;
-}
+
 
 
 /* =========================
